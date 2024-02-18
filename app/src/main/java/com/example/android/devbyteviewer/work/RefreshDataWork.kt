@@ -33,6 +33,11 @@ import retrofit2.HttpException
 // use Payload() to return SUCCESS or RETRY result.
 class RefreshDataWorker(appContext: Context, params: WorkerParameters):
     CoroutineWorker(appContext, params) {
+
+    companion object {
+        const val WORK_NAME = "RefreshDataWorker"
+    }
+
     /**
      * A coroutine-friendly method to do your work.
      */
